@@ -81,12 +81,18 @@ testRunner.Given("the user is on ParaBank homepage", ((string)(null)), ((TechTal
         
         public virtual void UserLoginsWithValidCredentials(string username, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "smoke"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logins with valid credentials", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+#line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -109,34 +115,36 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 8
  testRunner.And(string.Format("user types username {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
  testRunner.And(string.Format("user types password {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
+#line 10
  testRunner.When("user clicks Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 10
+#line 11
  testRunner.Then("user should see the Log Out link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User logins with valid credentials, katy1234", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("User logins with valid credentials, katy1234", new string[] {
+                "smoke"}, SourceLine=15)]
         public virtual void UserLoginsWithValidCredentials_Katy1234()
         {
-#line 6
+#line 7
 this.UserLoginsWithValidCredentials("katy1234", "1234", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User logins with valid credentials, OldManChristmas", SourceLine=14)]
+        [TechTalk.SpecRun.ScenarioAttribute("User logins with valid credentials, OldManChristmas", new string[] {
+                "smoke"}, SourceLine=15)]
         public virtual void UserLoginsWithValidCredentials_OldManChristmas()
         {
-#line 6
+#line 7
 this.UserLoginsWithValidCredentials("OldManChristmas", "Ho!ho!ho!", ((string[])(null)));
 #line hidden
         }
@@ -148,7 +156,7 @@ this.UserLoginsWithValidCredentials("OldManChristmas", "Ho!ho!ho!", ((string[])(
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User logins with invalid credentials", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 19
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -171,34 +179,34 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 20
+#line 21
  testRunner.And(string.Format("user types username {0}", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 22
  testRunner.And(string.Format("user types password {0}", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
+#line 23
  testRunner.When("user clicks Login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 23
+#line 24
  testRunner.Then("user should get an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User logins with invalid credentials, katy1234", SourceLine=26)]
+        [TechTalk.SpecRun.ScenarioAttribute("User logins with invalid credentials, katy1234", SourceLine=27)]
         public virtual void UserLoginsWithInvalidCredentials_Katy1234()
         {
-#line 19
+#line 20
 this.UserLoginsWithInvalidCredentials("katy1234", "1235", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("User logins with invalid credentials, katy1235", SourceLine=26)]
+        [TechTalk.SpecRun.ScenarioAttribute("User logins with invalid credentials, katy1235", SourceLine=27)]
         public virtual void UserLoginsWithInvalidCredentials_Katy1235()
         {
-#line 19
+#line 20
 this.UserLoginsWithInvalidCredentials("katy1235", "1234", ((string[])(null)));
 #line hidden
         }

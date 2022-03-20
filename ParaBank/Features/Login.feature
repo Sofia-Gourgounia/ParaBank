@@ -3,6 +3,7 @@
 Background:
 Given the user is on ParaBank homepage
 
+@smoke
 Scenario: User logins with valid credentials
 	And user types username <username>
 	And user types password <password>
